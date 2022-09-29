@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<br><br>
+<font color = "white">
+<form class="row g-3 px-5" method="post" action="/other_search">
+{% csrf_token %}
+<h1 class="h3 mb-3 fw-normal">Search Criminal</h1>
+  <div class="col-md-4 ">
+    <label for="validationDefault01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationDefault01" name="fname" autofocus required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationDefault02" name="lname" required>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Uniq Id</label>
+    <input type="text" class="form-control" id="inputZip" maxlength = "6" name='uniq1' maxlength = "6" minlength = "6" required>
+  </div>
+  <div class="mb-3">
+    <label for="validationTextarea" class="form-label">Reason For Search</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required textarea" name="reason" required></textarea>
+    <div class="invalid-feedback">
+      Please enter a Reason in the textarea.
+    </div>
+  </div>
+<div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+    &nbsp<input class="btn btn-primary" type="reset" value="Reset">
+  </div>
+</form>
+</font>
+{% endblock body %}

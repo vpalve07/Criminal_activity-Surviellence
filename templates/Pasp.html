@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title %}Add{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<!--<div class="row g-3 px-3">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+  </div>
+</div>
+<div>
+    <div class="col-sm-1 px-3">
+        <input type="text" class="form-control" placeholder="Age" aria-label="Age">
+    </div>
+    <div class="col-sm-4 px-3">
+        <input type="text" class="form-control" placeholder="Criminal Type" aria-label="Criminal Type">
+    </div>
+</div>
+<div class="row g-3 px-3">
+  <div class="col-sm-4">
+    <input type="text" class="form-control" placeholder="City" aria-label="City">
+  </div>
+  <div class="col-sm">
+    <input type="text" class="form-control" placeholder="State" aria-label="State">
+  </div>
+  <div class="col-sm-2 px-3">
+    <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+  </div>
+</div>-->
+<br>
+<h5><font color = "red">Note: Here You can add details of Criminals involved in Rape Cases only</font></h5>
+
+<br><br><font color="white">
+<form class="row g-3 px-3" method="post" action="/Pasp" >
+{% comment %} enctype = "multipart/form-data" {% endcomment %}
+{% csrf_token %}
+<h1 class="h3 mb-3 fw-normal">Fill Criminal Details</h1>
+  <div class="col-md-3">
+    <label for="text" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="text" name="fname" autofocus required>
+  </div>
+  <div class="col-md-3">
+    <label for="text" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="text" name="lname" required>
+  </div>
+  <div class="col-md-1">
+    <label for="text" class="form-label">Age</label>
+    <input type="text" class="form-control" id="text" name="age" required>
+  </div>
+  <!--<div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>-->
+  <div class="col-md-7">
+    <label for="text" class="form-label">Criminal Charges</label>
+    <input type="text" class="form-control" id="text" name="charges" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">Last Seen in City</label>
+    <input type="text" class="form-control" id="inputCity" name="city" required>
+  </div>
+  <!--<div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>-->
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip" name="zip" maxlength = "6" minlength = "6" required>
+  </div>
+  <div class="col-md-6">
+    <label for="text" class="form-label">Duration In Custody</label>
+    <input type="text" class="form-control" id="text" name="duration" required>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Uniq Id</label>
+    <input type="text" class="form-control" id="inputZip" maxlength = "6" name='uniq1' maxlength = "6" minlength = "6" required>
+  </div>
+  <div class="col-md-8">
+    <label for="inputAddress" class="form-label">Current Location</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="location" required>
+  </div>
+  <div class="col-md-5 mb-3">
+    <label for="formFile" class="form-label">Choose Image Id</label>
+    <input class="form-control" type="file" id="formFile" name="image" required>  
+  </div>
+  <div class="col-md-3">
+    <label for="text" class="form-label">Activity Status</label>
+    <input type="text" class="form-control" id="text" name="status" required>
+  </div>
+  <h1 class="h3 mb-3 fw-normal">Fill Details Of the Officer
+  Who Handeled This Case</h1>
+  <div class="col-md-4">
+    <label for="text" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="text" name="fname1" required>
+  </div>
+  <div class="col-md-4">
+    <label for="text" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="text" name="lname1" required>
+  </div>
+  <div class="col-md-1">
+    <label for="text" class="form-label">Age</label>
+    <input type="text" class="form-control" id="text" name="age1" required>
+  </div>
+  <div class="col-md-4">
+    <label for="text" class="form-label">Rank</label>
+    <input type="text" class="form-control" id="text" name="rank" required>
+  </div>
+  <div class="col-md-4">
+    <label for="phone2numeric" class="form-label">Contact Number</label>
+    <input type="text" class="form-control" id="phone2numeric" name="phone" maxlength = "12" minlength = "10" required>
+  </div><br>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Add Details</button>
+    &nbsp<input class="btn btn-primary" type="reset" value="Reset">
+    &nbsp<a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+  </div><br>
+</form>
+</font>
+{% endblock body %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+
+<br><br>
+<form class="row g-3 px-3" method="post" action="/complaint">
+{% csrf_token %}
+<h1 class="h3 mb-3 fw-normal">Fill Criminal Details</h1>
+  <div class="col-md-3">
+    <label for="text" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="text" name="fname" autofocus required>
+  </div>
+  <div class="col-md-3">
+    <label for="text" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="text" name="lname" required>
+  </div>
+
+<div class="col-md-4">
+    <label for="phone2numeric" class="form-label">Contact Number</label>
+    <input type="text" class="form-control" id="phone2numeric" name="phone" required>
+  </div>
+
+<div class="col-md-2">
+    <label for="text" class="form-label">City</label>
+    <input type="text" class="form-control" id="text" name="city" required>
+  </div>
+
+<div class="col-md-2">
+    <label for="text" class="form-label">State</label>
+    <input type="text" class="form-control" id="text" name="state" required>
+  </div>
+
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip" name="zip" required>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Register Complaint</button>
+    &nbsp<input class="btn btn-primary" type="reset" value="Reset">
+  </div>
+
+{% endblock body %}

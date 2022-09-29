@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}View Complaints{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+
+<font color  = "white">
+<br>
+<center><h1>All Complaints</h1></center>
+<!--<div class = "container">
+<br>
+
+{% for complaint in complaints %}
+    <strong>{{complaint}}</strong>
+    <ul>
+    <li>First Name: {{complaint.fname}}</li>
+    <li>Last Name: {{complaint.lname}}</li>
+    <li>Contact No: {{complaint.phone}}</li>
+    <li>City: {{complaint.city}}</li>
+    <li>State: {{complaint.State}}</li>
+    <li>Zip Code: {{complaint.zip}}</li>
+    <li>Complaint: {{complaint.complaint}}</li>
+    </ul>
+{% endfor %}
+<br>
+<center><a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+</center>        
+</div>
+-->
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Zip Code</th>
+      <br><th scope="col">Complaint</th>
+      {% comment %} <th scope="col">Uniq Id</th>
+      <th scope="col">Location</th>
+      <th scope="col">Status</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Rank</th>
+      <th scope="col">Contact</th> {% endcomment %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for complaint in complaints %}
+        <tr> 
+            {% comment %} <td><img src="{{ criminal.image.url }}"></td> {% endcomment %}
+            <td><br><br>&nbsp{{ complaint.fname }}</td>
+            <td><br><br>&nbsp{{ complaint.lname }}<br><br></td>
+            <td><br><br>&nbsp{{ complaint.phone }}</td>
+            <td><br><br>&nbsp{{ complaint.city }}</td>
+            <td><br><br>&nbsp{{ complaint.State }}</td>
+            <td><br><br>&nbsp{{ complaint.zip }}</td>
+            <td><br><br>&nbsp{{ complaint.complaint }}</td>
+             
+        </tr>
+         {% endfor %} 
+    </table>
+  </tbody>
+</table>
+<center><a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+</center>
+<br>
+
+
+{% endblock body %}

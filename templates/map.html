@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive maps for Django web apps</title>
+    
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+  </head>
+  <body>
+   <center><h2>Map time!</h2></center>
+   <div id='map' style='width: 1365px; height: 530px;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoidmlubmF5YWswNyIsImEiOiJja3YwbnB2NTkzMjY0MnZsbmplcGMwYjloIn0.Km4j0VYVbmiINRuCo9Kukg';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v10',
+    center: [77.00, 22.00],
+    zoom: 3.7
+  });
+</script>
+
+
+  </body>
+</html>
+
+{% endblock body %}

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}View All{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<font color  = "white">
+<br>
+<center><h1>Murderers</h1></center>
+<br>
+
+<!--{% for criminal in criminals %}
+    <strong>{{criminal}}</strong>
+    <ul>
+    <li>First Name: {{criminal.fname}}</li>
+    <li>Last Name: {{criminal.lname}}</li>
+    <li>Age: {{criminal.age}}</li>
+    <li>Charges: {{criminal.charges}}</li>
+    <li>City: {{criminal.city}}</li>
+    <li>Zip Code: {{criminal.zip}}</li>
+    <li>Duration In Custody: {{criminal.duration}}</li>
+    <li>Uniq Id: {{criminal.uniq1}}</li>
+    <li>Current Location: {{criminal.location}}</li>
+    <li>Image Id: {{criminal.image.url}}</li>
+    <li>Current Status: {{criminal.status}}</li>
+    <li>Officers First Name: {{criminal.fname1}}</li>
+    <li>Officers Last Name: {{criminal.lname1}}</li>
+    <li>Officers Age: {{criminal.age1}}</li>
+    <li>Officers Rank: {{criminal.rank}}</li>
+    <li>Officers Contact No: {{criminal.phone}}</li>
+    </ul>
+{% endfor %}
+<br>
+<a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+        
+-->
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Criminal Image</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Age</th>
+      <th scope="col">Charges</th>
+      <th scope="col">City</th>
+      <th scope="col">Zip</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Uniq Id</th>
+      <th scope="col">Current Location</th>
+      <th scope="col">Status</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Rank</th>
+      <th scope="col">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for criminal in criminals3 %}
+        <tr> 
+            <td><img src="{{ criminal.image.url }}"></td>
+            <td><br><br>&nbsp{{ criminal.fname }}</td>
+            <td><br><br>&nbsp{{ criminal.lname }}</td>
+            <td><br><br>&nbsp{{ criminal.age }}</td>
+            <td><br><br>&nbsp{{ criminal.charges }}</td>
+            <td><br><br>&nbsp{{ criminal.city }}</td>
+            <td><br><br>&nbsp{{ criminal.zip }}</td>
+            <td>&nbsp{{ criminal.duration }}</td>
+            <td><br><br>&nbsp{{ criminal.uniq1 }}</td>
+            {% comment %} <td><br><br>&nbsp{{ c.charges }}</td>
+            <td><br><br>&nbsp{{ c.city }}</td> {% endcomment %}
+            <td><br><br>&nbsp{{ criminal.location }}</td>
+            <td><br><br>&nbsp{{ criminal.status }}</td>
+            <td><br><br>&nbsp{{ criminal.fname1 }}</td>
+            <td><br><br>&nbsp{{ criminal.lname1 }}</td>
+            <td><br><br>&nbsp{{ criminal.age1 }}</td>
+            <td><br><br>&nbsp{{ criminal.rank }}</td>
+            <td><br><br>&nbsp{{ criminal.phone }}</td>
+             
+        </tr>
+         {% endfor %} 
+    </table>
+  </tbody>
+</table>
+<center><a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+</center>
+<br>
+{% endblock body %}

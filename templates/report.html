@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Report{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+{% comment %} <div style="background-image: url('https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');"> {% endcomment %}
+<font color = "white">
+<form class = "px-5" method="post" action="/report">
+{% csrf_token %}
+<h2><center>Fill The Details</center></h2>
+<br><br>
+<div class="row">
+  <div class="col">
+    <label for="validationDefault05" class="form-label">First Name</label>
+    <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname" autofocus required>
+  </div>
+
+  <br><br><br>
+  <div class="col">
+    <label for="validationDefault05" class="form-label">Last Name</label>
+    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname" required>
+  </div>
+</div><br>
+<div class="col-md-3">
+    <label for="validationDefault05" class="form-label">Phone Number</label>
+    <input type="text" class="form-control" id="validationDefault05" maxlength = "12" minlength = "10" name="phone" required>
+  </div>
+<br>
+<div class="row g-3">
+  <div class="col-sm-7">
+    <label for="validationDefault05" class="form-label">City</label>
+    <input type="text" class="form-control" placeholder="City" aria-label="City" name="city" required>
+  </div>
+  <br><br><br>
+  <div class="col-sm">
+    <label for="validationDefault05" class="form-label">State</label>
+    <input type="text" class="form-control" placeholder="State" aria-label="State" name="state" required>
+  </div>
+  <div class="col-sm">
+    <label for="validationDefault05" class="form-label">Zip</label>
+    <input type="text" class="form-control" placeholder="Zip" aria-label="Zip" name="zip" maxlength = "6" minlength = "6" required>
+  </div>
+</div>
+<br>
+<div class="mb-3">
+  <label for="FormControlTextarea1" class="form-label">Write Your Complaint</label>
+  <textarea class="form-control" id="FormControlTextarea1" rows="3" name="complaint" required></textarea>
+</div>
+
+<div class="col-12">
+    <button type="submit" class="btn btn-primary">Register Complaint</button>
+    &nbsp<input class="btn btn-primary" type="reset" value="Reset">
+  &nbsp<a href="/index" class="btn btn-primary">
+            Back
+          </a>
+  </div>
+  
+</form>
+</font>
+{% endblock body %}

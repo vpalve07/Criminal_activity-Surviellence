@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Officials{% endblock title %}
+
+{% block body %}
+
+<form class="p-4 p-md-5 border rounded-3 bg-light"method="post" action="/otheroffLogin">
+{% csrf_token %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<h1 class="h3 mb-3 fw-normal"><center>Please sign in</center></h1>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name='email11' autofocus>
+        <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name='password11'>
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="id" class="form-control" id="floatingInput" placeholder="Uniq Id" name='uniq11'>
+          <label for="floatingInput">Uniq Id</label>
+        </div>
+        <!--<div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>-->
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <hr class="my-4">
+        <p class="mt-5 mb-3 text-muted"><center>© 2020–2021</center></p>
+</form>
+{% endblock body %}

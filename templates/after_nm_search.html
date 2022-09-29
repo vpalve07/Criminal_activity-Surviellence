@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}After{% endblock title %}
+
+{% block body %}
+
+ <Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"> 
+    <font color = "white">
+    {% comment %} <table>
+        <tr>
+            <th>IMAGE</th><br>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>CHARGES</th>
+            <th>STATUS</th>
+            <th>OFFICER FIRST NAME</th>
+            <th>OFFICER LAST NAME</th>
+            <th>OFFICER PHONE</th>
+        </tr>
+        {% for c in result3 %}
+        <tr> 
+            <td><img src="{{ c.image.url }}"></td>
+            <td>{{ c.fname }}</td>
+            <td>{{ c.lname }}</td>
+            <td>{{ c.charges }}</td>
+            <td>{{ c.status }}</td>
+            <td>{{ c.fname1 }}</td>
+            <td>{{ c.lname1 }}</td>
+            <td>{{ c.phone }}</td>
+             
+        </tr>
+         {% endfor %} 
+    </table>
+     {% endcomment %}
+
+    <table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Criminal First Name</th>
+      <th scope="col">Criminal Last Name</th>
+      {% comment %} <th scope="col">Uniq Id</th> {% endcomment %}
+      <th scope="col">All Charges</th>
+      <th scope="col">City</th>
+      <th scope="col">Current Location</th>
+      <th scope="col">STATUS</th>
+      <th scope="col">OFFICER FIRST NAME</th>
+      <th scope="col">OFFICER LAST NAME</th>
+      <th scope="col">OFFICER PHONE</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for c in result3 %}
+        <tr> 
+            <td><img src="{{ c.image.url }}"></td>
+            <td><br><br>&nbsp{{ c.fname }}</td>
+            <td><br><br>&nbsp{{ c.lname }}</td>
+            {% comment %} <td><br><br>&nbsp{{ c.uniq1 }}</td> {% endcomment %}
+            <td><br><br>&nbsp{{ c.charges }}</td>
+            <td><br><br>&nbsp{{ c.city }}</td>
+            <td><br><br>&nbsp{{ c.location }}</td>
+            <td><br><br>&nbsp{{ c.status }}</td>
+            <td><br><br>&nbsp{{ c.fname1 }}</td>
+            <td><br><br>&nbsp{{ c.lname1 }}</td>
+            <td><br><br>&nbsp{{ c.phone }}</td>
+             
+        </tr>
+         {% endfor %} 
+    </table>
+  </tbody>
+</table>
+{% comment %} <center>
+<a href="/index" class="btn btn-primary">
+            Back
+          </a>
+</center> {% endcomment %}
+    {% endblock body %}

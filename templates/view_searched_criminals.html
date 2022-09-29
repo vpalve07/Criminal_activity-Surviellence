@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}View Searched Criminals{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<font color  = "white"><br>
+<center><h1>All Searches</h1></center>
+<!--<div class = "container">
+<br>
+
+{% for search in searched %}
+    <strong>{{search}}</strong>
+    <ul>
+    <li>First Name: {{search.ufname}}</li>
+    <li>Last Name: {{search.ulname}}</li>
+    <li>UserName: {{search.username}}</li>
+    <li>Contact No: {{search.phone}}</li>
+    <li>City: {{search.city}}</li>
+    <li>Criminals First Name: {{search.cfname}}</li>
+    <li>Criminals Last Name: {{search.clname}}</li>
+    <li>Reason For Searching: {{search.reason}}</li>
+    </ul>
+{% endfor %}
+<br>-->
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">City</th>
+      <th scope="col">Criminals FirstName</th>
+      <th scope="col">Criminals LastName</th>
+      {% comment %} <th scope="col">Criminal Id</th> {% endcomment %}
+      <br><th scope="col">Reason of Searching</th>
+      {% comment %} <th scope="col">Uniq Id</th>
+      <th scope="col">Location</th>
+      <th scope="col">Status</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Rank</th>
+      <th scope="col">Contact</th> {% endcomment %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for search in searched %}
+        <tr> 
+            {% comment %} <td><img src="{{ criminal.image.url }}"></td> {% endcomment %}
+            <td><br><br>&nbsp{{ search.ufname }}</td>
+            <td><br><br>&nbsp{{ search.ulname }}<br><br></td>
+            <td><br><br>&nbsp{{ search.username }}</td>
+            <td><br><br>&nbsp{{ search.phone }}</td>
+            <td><br><br>&nbsp{{ search.city }}</td>
+            <td><br><br>&nbsp{{ search.cfname }}</td>
+            <td><br><br>&nbsp{{ search.clname }}</td>
+            {% comment %} <td><br><br>&nbsp{{ search.image.url }}</td> {% endcomment %}
+            <td><br><br>&nbsp{{ search.reason }}</td>
+             
+        </tr>
+        {% endfor %}
+    </table>
+  </tbody>
+</table>
+<center>
+<a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+</center><br>
+{% comment %} </div> {% endcomment %}
+
+<!--<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      {% comment %} <th scope="col">Criminal Image</th> {% endcomment %}
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">City</th>
+      <th scope="col">Criminal First Name</th>
+      <th scope="col">Criminal Last Name</th>
+      <th scope="col">Reason For Searching</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for search in searched %}
+        <tr> 
+            {% comment %} <td><img src="{{ criminal.image.url }}"></td> {% endcomment %}
+            <td><br><br>&nbsp{{ search.ufname }}</td>
+            <td><br><br>&nbsp{{ search.ulname }}<br><br></td>
+            <td><br><br>&nbsp{{ search.username }}</td>
+            <td><br><br>&nbsp{{ search.phone }}</td>
+            <td><br><br>&nbsp{{ search.city }}</td>
+            <td><br><br>&nbsp{{ search.cfname }}</td>
+            <td><br><br>&nbsp{{ search.clname }}</td>
+            <td><br><br>&nbsp{{ search.reason }}</td>
+            {% comment %} <td><br><br>&nbsp{{ c.charges }}</td>
+            <td><br><br>&nbsp{{ c.city }}</td> {% endcomment %}
+             
+        </tr>
+         {% endfor %} 
+    </table>
+  </tbody>
+</table>
+<center><a href="/offIndex" class="btn btn-primary">
+            Back
+          </a>
+          <br>
+</center>
+<br>-->
+
+
+{% endblock body %}

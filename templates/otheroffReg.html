@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Registration{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<font color = "white">
+<div class ="container">
+
+<form class="row g-3" method="post" action="/otheroffReg">
+{% csrf_token %}
+<br><br>
+  <h1 class="h3 mb-3 fw-normal"><center>Please sign up</center></h1>
+  <div class="col-md-3">
+    <label for="text" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="text" name='name11' autofocus required>
+  </div>
+  <div class="col-md-3">
+    <label for="text" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="text" name='name22' required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" name='email11' required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" name='password11' required>
+  </div>
+  <div class="col-md-3">
+    <label for="text" class="form-label">Contact No</label>
+    <input type="text" class="form-control" id="text" maxlength = "12" name='contact11' maxlength = "12" minlength = "10" required>
+  </div>
+  <div class="col-md-3">
+    <label for="text" class="form-label">Proffesion</label>
+    <input type="text" class="form-control" id="text" name='pro11' required>
+  </div>
+  
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Uniq Id</label>
+    <input type="text" class="form-control" id="inputZip" maxlength = "6" minlength = "6" name='uniq11' required>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" name='address11' placeholder="1234 Main St" required>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" name='address22' placeholder="Apartment, studio, or floor" required>
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity" name='city11' required>
+  </div>
+  <!--<div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>-->
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign up</button>
+    &nbsp<input class="btn btn-primary" type="reset" value="Reset">
+  </div>
+</form><br>
+
+</div>
+</font>
+{% endblock body %}
+
+
+

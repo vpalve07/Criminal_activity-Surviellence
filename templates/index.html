@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<Body background="https://images.unsplash.com/photo-1614496281665-1b7f456cfddf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8QmxhY2t8fHx8fHwxNjI5Nzc3MTkz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600">
+<font color="white">
+<div class="container-fluid px-0">
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1613918514536-2071b86612c4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=650&ixid=MnwxfDB8MXxyYW5kb218MHx8Y3JpbWluYWxzfHx8fHx8MTYyOTEyNTg0OQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Welcome To Criminal Activity Survillance</h5>
+        <p>A public service initiative to ensure safety of our citizens</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1563486688110-3e8087cb4bb8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=650&ixid=MnwxfDB8MXxyYW5kb218MHx8Y3JpbWVzfHx8fHx8MTYyOTEyNDIxMA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Self Defence Is Not Only Our Right, But It Is Also Our Duty</h5>
+        <p>Through this website, we pledge to help our citizens in defending themselves against suspecious individuals who might pose a danger to their daily lives.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1606022831434-91293aebf25a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=650&ixid=MnwxfDB8MXxyYW5kb218MHx8cG9saWNlfHx8fHx8MTYyOTEyNDI0NA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>A nobel and organised efforts to help the various law enforecement agencies and general public in nutralising and preventing criminal treats.</h5>
+        <p>Relieve your suspecions regarding dubious activities as well as individuals by searching them up throug our portal.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div>
+
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom">Services</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+        </div>
+        <h2>Search With Name</h2>
+        <p>Search Criminals by their name or aliases to see a brief summary of their records.</p>
+        <a href="/services1" class="btn btn-primary">
+            Call to Action
+        </a>
+        <!--<a href="/services1" class="icon-link">
+          Call to action
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>-->
+      </div>
+      <!--<div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+        </div>
+        <h2>Search With Id</h2>
+        <p>Search Criminal with photo ID to see a brief summery of their records.</p>
+        <a href="/services2" class="btn btn-primary">
+            Call to Action
+          </a>
+        <a href="/services2" class="icon-link">
+          Call to action
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a> 
+      </div>-->
+      <div class="feature col">
+        <div class="feature-icon bg-primary bg-gradient">
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+        </div>
+        <h2>Register Complaint</h2>
+        <p>Register a complaint with our administration ragarding the suspecious activities/individuals in your vicinity .</p>
+        <a href="/report" class="btn btn-primary">
+            Call to Action
+          </a>
+        <!--<a href="/report" class="icon-link">
+          Call to action
+          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+        </a>-->
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Safety Instructions</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://source.unsplash.com/450x600/?hospital');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Covid 19 Guidelines</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://images.unsplash.com/1/type-away.jpg?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8TmV3c3x8fHx8fDE2MjkxODgzNDQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <a href="https://ncdc.gov.in/" class="icon-link">
+                <small>Covid19 Guidelines</small>
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+              <!--<li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>3d</small>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+          
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://source.unsplash.com/450x600/?police');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Law Enforcement by Maharashtra state police</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://images.unsplash.com/1/type-away.jpg?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8TmV3c3x8fHx8fDE2MjkxODgzNDQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <a href="https://www.mahapolice.gov.in/" class="icon-link">
+                <small>Law Enforcement</small>
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+              <!--<li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>4d</small>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://source.unsplash.com/450x600/?accident');">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">National Road Safety Guidelines</h2>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="https://images.unsplash.com/1/type-away.jpg?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8TmV3c3x8fHx8fDE2MjkxODgzNDQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                <a href="https://www.mygov.in/campaigns/national-road-safety/" class="icon-link">
+                <small>Road Safety Guidelines</small>
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </li>
+              <!--<li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+                <small>5d</small>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          {% comment %} <li class="nav-item mb-2"><a href="/services1" class="nav-link p-0 text-muted">Search</a></li> {% endcomment %}
+          <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About Us</a></li>
+          {% comment %} <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Log Out</a></li> {% endcomment %}
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          {% comment %} <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li> {% endcomment %}
+          <li class="nav-item mb-2"><a href="/services1" class="nav-link p-0 text-muted">Search</a></li>
+          {% comment %} <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About Us</a></li> {% endcomment %}
+          <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact Us</a></li>
+          {% comment %} <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Log Out</a></li> {% endcomment %}
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          {% comment %} <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="/services1" class="nav-link p-0 text-muted">Search</a></li>
+          <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About Us</a></li> {% endcomment %}
+          <li class="nav-item mb-2"><a href="/report" class="nav-link p-0 text-muted">Register Complaint</a></li>
+          <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Log Out</a></li>
+        </ul>
+      </div>
+
+      <div class="col-4 offset-1">
+        <form>
+          <h5>Subscribe</h5>
+          <p>Monthly digest of whats new and exciting from us.</p>
+          <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between py-4 my-4 border-top">
+      <p>© 2021, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+</font>
+{% endblock body %}
